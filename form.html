@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Personalized Learning Paths</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f2f2f2;
+        scroll-behavior: smooth;
+      }
+
+      .container {
+        max-width: 600px;
+        margin: 50px auto;
+        background-color: #fff;
+        padding: 30px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        transition: box-shadow 0.3s;
+      }
+
+      h1 {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+
+      .form-group {
+        margin-bottom: 20px;
+      }
+
+      label {
+        font-weight: bold;
+        display: block;
+      }
+
+      input[type="text"],
+      input[type="email"],
+      select,
+      textarea {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 20px;
+        font-size: 16px;
+        transition: border-color 0.3s;
+      }
+
+      select {
+        appearance: none;
+      }
+
+      textarea {
+        resize: vertical;
+      }
+
+      button {
+        background-color: #007bff;
+        color: #fff;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 20px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+        font-size: 16px;
+      }
+
+      button:hover {
+        background-color: #0056b3;
+      }
+
+      .error-message {
+        color: #ff0000;
+        font-size: 0.8em;
+        margin-top: 5px;
+        display: none;
+      }
+
+      .hidden {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Personalized Learning Paths</h1>
+      <form id="learningPathForm">
+        <div class="form-group">
+          <label for="name">Name:</label>
+          <input type="text" id="name" required />
+          <div class="error-message hidden" id="name-error">
+            Please enter your name.
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input type="email" id="email" required />
+          <div class="error-message hidden" id="email-error">
+            Please enter a valid email address.
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="interest">Area of Interest:</label>
+          <select id="interest" required>
+            <option value="">Select Interest</option>
+            <option value="Technology">Technology</option>
+            <option value="Business">Business</option>
+            <option value="Humanities">Humanities</option>
+            <option value="Science">Science</option>
+            <option value="Arts">Arts</option>
+            <option value="Health & Wellness">Health & Wellness</option>
+            <option value="Language & Literature">Language & Literature</option>
+            <option value="Social Sciences">Social Sciences</option>
+            <option value="Design & Creativity">Design & Creativity</option>
+            <option value="Personal Development">Personal Development</option>
+            <option value="Environment & Sustainability">
+              Environment & Sustainability
+            </option>
+            <option value="Other">Other</option>
+          </select>
+          <input
+            type="text"
+            id="otherInterest"
+            placeholder="Specify Other"
+            class="hidden"
+          />
+        </div>
+        <div class="form-group">
+          <label for="student">Are you currently a student?</label>
+          <select id="student" required>
+            <option value="">Select</option>
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="education">Level of Education:</label>
+          <select id="education" required disabled>
+            <option value="">Select</option>
+            <option value="Below 12th Grade">Below 12th Grade</option>
+            <option value="12th Grade">12th Grade</option>
+            <option value="In College">In College</option>
+            <option value="Bachelor's Degree">Bachelor's Degree</option>
+            <option value="Master's Degree">Master's Degree</option>
+            <option value="Doctorate Degree">Doctorate Degree</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="preferences">Additional Preferences:</label>
+          <textarea
+            id="preferences"
+            rows="4"
+            placeholder="Enter any additional preferences"
+          ></textarea>
+        </div>
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const studentSelect = document.getElementById("student");
+        const educationSelect = document.getElementById("education");
+        const degreeInput = document.getElementById("degree");
+        const otherInterestInput = document.getElementById("otherInterest");
+        const nameInput = document.getElementById("name");
+        const emailInput = document.getElementById("email");
+
+        studentSelect.addEventListener("change", function () {
+          if (this.value === "Yes") {
+            educationSelect.removeAttribute("disabled");
+          } else {
+            educationSelect.setAttribute("disabled", "disabled");
+            degreeInput.setAttribute("disabled", "disabled");
+            educationSelect.value = "";
+            degreeInput.value = "";
+          }
+        });
+
+        educationSelect.addEventListener("change", function () {
+          if (this.value === "In College") {
+            degreeInput.classList.remove("hidden");
+          } else {
+            degreeInput.classList.add("hidden");
+            degreeInput.value = "";
+          }
+        });
+
+        const interestSelect = document.getElementById("interest");
+
+        interestSelect.addEventListener("change", function () {
+          if (this.value === "Other") {
+            otherInterestInput.classList.remove("hidden");
+          } else {
+            otherInterestInput.classList.add("hidden");
+            otherInterestInput.value = "";
+          }
+        });
+
+        const form = document.getElementById("learningPathForm");
+        form.addEventListener("submit", function (event) {
+          event.preventDefault();
+
+          if (!validateForm()) {
+            return;
+          }
+
+          const formData = {
+            name: nameInput.value,
+            email: emailInput.value,
+            interest: document.getElementById("interest").value,
+            otherInterest: otherInterestInput.value,
+            student: studentSelect.value,
+            education: educationSelect.value,
+            degree: degreeInput.value,
+            preferences: document.getElementById("preferences").value,
+          };
+
+          console.log(formData);
+        });
+
+        function validateForm() {
+          let isValid = true;
+
+          if (!nameInput.value.trim()) {
+            document.getElementById("name-error").classList.remove("hidden");
+            isValid = false;
+          } else {
+            document.getElementById("name-error").classList.add("hidden");
+          }
+
+          if (!emailInput.value.trim() || !isValidEmail(emailInput.value)) {
+            document.getElementById("email-error").classList.remove("hidden");
+            isValid = false;
+          } else {
+            document.getElementById("email-error").classList.add("hidden");
+          }
+
+          return isValid;
+        }
+
+        function isValidEmail(email) {
+          return /\S+@\S+\.\S+/.test(email);
+        }
+      });
+    </script>
+    <script>
+      function submitForm() {
+        const form = document.getElementById("learningPathForm");
+        const formData = new FormData(form);
+
+        fetch("/submit", {
+          method: "POST",
+          body: formData,
+        })
+          .then((response) => {
+            if (!response.ok) {
+              throw new Error("Network response was not ok");
+            }
+            return response.json();
+          })
+          .then((data) => {
+            console.log(data);
+            // Handle the response from the server
+          })
+          .catch((error) => {
+            console.error("Error:", error);
+            // Handle errors
+          });
+      }
+    </script>
+  </body>
+</html>
