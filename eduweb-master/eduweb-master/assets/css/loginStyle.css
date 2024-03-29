@@ -98,6 +98,10 @@ body {
     font-weight: 600;
 }
 
+.btn:hover{
+    filter: brightness(90%);
+}
+
 .wrapper .register-link {
     font-size: 14.5px;
     text-align: center;

@@ -20,5 +20,49 @@
     <a href="login.html">Login to Continue</a>
 
 </body>
+<script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.10.0/firebase-app.js";
+    import { getDatabase, set, ref, update } from "https://www.gstatic.com/firebasejs/10.10.0/firebase-database.js";
+    import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.10.0/firebase-auth.js";
+    import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.10.0/firebase-analytics.js";
+
+
+    document.addEventListener('DOMContentLoaded', function () {
+        // Import the functions you need from the SDKs you need
+
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        const firebaseConfig = {
+            apiKey: "AIzaSyDJ9-6MZ3X_9Hou9axr8Cl5zLLYV4g0sbs",
+            authDomain: "login-page-using-firebas-1a30c.firebaseapp.com",
+            databaseURL: "https://login-page-using-firebas-1a30c-default-rtdb.firebaseio.com",
+            projectId: "login-page-using-firebas-1a30c",
+            storageBucket: "login-page-using-firebas-1a30c.appspot.com",
+            messagingSenderId: "258163682110",
+            appId: "1:258163682110:web:aae4d54db2bc3686005a6f",
+            measurementId: "G-JM07NFC74E"
+        };
+
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const database = getDatabase(app);
+        const auth = getAuth();
+        const analytics = getAnalytics(app);
+
+    
+
+        onAuthStateChanged(auth, (user) => {
+            if (user) {
+                window.location.href = "index.html";
+            } else {
+            }
+        });
+
+        
+    });
+</script>
 
 </html>
