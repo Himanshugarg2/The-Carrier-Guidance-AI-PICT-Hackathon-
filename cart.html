@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Cart</title>
+    <link rel="stylesheet" href="assets/css/cart.css" />
+    <style>
+      /* Reset default margin and padding */
+      body,
+      h1,
+      h2,
+      h3,
+      h4,
+      p,
+      ul {
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        background-color: #f9f9f9;
+        color: #333;
+      }
+
+      /* Container styles */
+      .container {
+        max-width: 900px;
+        margin: auto;
+        padding: 20px;
+      }
+
+      /* Section styles */
+      section {
+        background-color: #fff;
+        margin-bottom: 20px;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+      }
+
+      section h2 {
+        margin-bottom: 20px;
+        color: #333;
+      }
+
+      /* Cart item styles */
+      .cart-item {
+        display: flex;
+        align-items: center;
+        border-bottom: 1px solid #ddd;
+        padding: 15px 0;
+      }
+
+      .cart-item-image {
+        width: 100px;
+        margin-right: 20px;
+        border-radius: 5px;
+      }
+
+      .cart-item-details h4 {
+        margin-bottom: 5px;
+        color: #333;
+      }
+
+      .cart-item-details p {
+        margin-bottom: 5px;
+        color: #666;
+      }
+
+      /* Button styles */
+      .btn {
+        background-color: #4caf50;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-right: 10px;
+      }
+
+      .btn:hover {
+        background-color: #45a049;
+      }
+
+      /* Clear Cart and Proceed to Buy buttons */
+      #clear-cart,
+      #proceedButton {
+        margin-top: 20px;
+      }
+
+      /* Subtotal styles */
+      .subtotal {
+        margin-top: 20px;
+        text-align: right;
+      }
+
+      .subtotal h4 {
+        color: #333;
+      }
+
+      /* Responsive styles */
+      @media screen and (max-width: 768px) {
+        .container {
+          padding: 10px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <section id="cart">
+        <h2>My Cart</h2>
+        <div id="cart-items"></div>
+        <div id="cart-summary"></div>
+        <button id="clear-cart" class="btn">Clear Cart</button>
+        <button id="proceedButton" class="btn">Proceed to Buy</button>
+      </section>
+    </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        function renderCartItems() {
+          var cartItemsContainer = document.getElementById("cart-items");
+          var cartSummaryContainer = document.getElementById("cart-summary");
+          cartItemsContainer.innerHTML = "";
+          cartSummaryContainer.innerHTML = "";
+
+          var subtotal = 0;
+          var cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
+
+          if (cartItems.length === 0) {
+            cartItemsContainer.innerHTML = "<p>Your cart is empty.</p>";
+          } else {
+            cartItems.forEach(function (item, index) {
+              var itemHtml = `
+                        <div class="cart-item">
+                            <img src="${item.image}" alt="${
+                item.title
+              }" class="cart-item-image">
+                            <div class="cart-item-details">
+                                <h4>${item.title}</h4>
+                                <p>Price: $${item.price.toFixed(2)}</p>
+                                <p>Duration: ${item.duration}</p>
+                                <p>Rating: ${item.rating}</p>
+                                <button class="remove-item btn" data-index="${index}">Remove</button>
+                            </div>
+                        </div>
+                    `;
+              cartItemsContainer.innerHTML += itemHtml;
+              subtotal += item.price;
+            });
+          }
+
+          if (subtotal > 0) {
+            cartSummaryContainer.innerHTML = `
+                    <div class="subtotal">
+                        <h4>Subtotal: $${subtotal.toFixed(2)}</h4>
+                    </div>
+                `;
+          }
+
+          var removeButtons = document.querySelectorAll(".remove-item");
+          removeButtons.forEach(function (button) {
+            button.addEventListener("click", removeItem);
+          });
+        }
+
+        function removeItem(event) {
+          var index = event.target.dataset.index;
+          var cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
+          cartItems.splice(index, 1);
+          localStorage.setItem("cartItems", JSON.stringify(cartItems));
+          renderCartItems();
+        }
+
+        document
+          .getElementById("clear-cart")
+          .addEventListener("click", function () {
+            localStorage.removeItem("cartItems");
+            renderCartItems();
+          });
+
+        renderCartItems();
+      });
+    </script>
+  </body>
+</html>
