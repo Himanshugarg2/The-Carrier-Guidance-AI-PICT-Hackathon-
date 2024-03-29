@@ -302,7 +302,17 @@ main {
     text-align: justify;
     color: black;
     flex-grow: 1;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-image: url(..assets\images\dataSci.jpg);
 }
+
+.main-cont :nth-of-type(1){
+}
+
+
 .footing {
     border-top: 5px solid black;
     display: flex;

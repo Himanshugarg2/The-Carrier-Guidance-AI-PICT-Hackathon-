@@ -32,7 +32,7 @@
       <a href="index.html" class="logo">
         <img src="./assets/images/LearnXperiencePlain.png" width="50px" alt="LearnXperience" logo" />
       </a>
-      <h1>  
+      <h1>
         LearnXperience
       </h1>
 
@@ -74,10 +74,8 @@
           <ion-icon name="search-outline" aria-hidden="true"></ion-icon>
         </button>
 
-        <button class="header-action-btn" aria-label="cart" title="Cart">
+        <button class="header-action-btn" aria-label="cart" title="Cart" onclick="openCart()">
           <ion-icon name="cart-outline" aria-hidden="true"></ion-icon>
-
-          <span class="btn-badge">0</span>
         </button>
 
         <button class="header-action-btn" aria-label="open menu" data-nav-toggler>
@@ -88,39 +86,20 @@
       <div class="overlay" data-nav-toggler data-overlay></div>
     </div>
   </header>
+  
   <main>
     <section class="courses">
       <article class="course">
         <div class="heading">
-          <h1>Course 1</h1>
+          <h1>Advanced Data Science and Machine Learning</h1>
         </div>
         <div class="main-cont">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque qui quisquam rem earum incidunt laborum, nobis tempore illum nam neque aliquid doloribus! Nulla fugiat tenetur aut veritatis, cum ducimus repellat?
-          Repellendus voluptatem expedita ipsum nihil cumque, quidem ea consequatur exercitationem tenetur dolorum voluptas sint hic inventore error nemo? Animi vitae quibusdam, nulla voluptatum odit at cum illum. Fugit, ipsum corrupti.
-        </div>
-        <div class="footing">
-          <div class="addCart">
-            <button  aria-label="cart" title="Cart" class="car">
-              <div class="icnCircle">
-                <ion-icon name="cart-outline" aria-hidden="true"></ion-icon>
-              </div>
-              Add To Cart
-            </button>
-          </div>
-          <div class="price">
-            <span>&#8377</span> 3000
-          </div>
-        </div>
-      </article>
-      <article class="course">
-        <div class="heading">
-          <h1>Course 2</h1>
-        </div>
-        <div class="main-cont">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque qui quisquam rem earum incidunt laborum, nobis
-          tempore illum nam neque aliquid doloribus! Nulla fugiat tenetur aut veritatis, cum ducimus repellat?
-          Repellendus voluptatem expedita ipsum nihil cumque, quidem ea consequatur exercitationem tenetur dolorum voluptas
-          sint hic inventore error nemo? Animi vitae quibusdam, nulla voluptatum odit at cum illum. Fugit, ipsum corrupti.
+          Dive deep into the world of data science and machine learning with this advanced course. Explore cutting-edge
+          algorithms, techniques, and tools used in the industry. Learn to analyze complex datasets, build predictive
+          models, and
+          deploy machine learning solutions. Take your data science skills to the next level and stay ahead in this
+          rapidly
+          evolving field.
         </div>
         <div class="footing">
           <div class="addCart">
@@ -132,19 +111,22 @@
             </button>
           </div>
           <div class="price">
-            <span>&#8377</span> 3000
+            <span>&#8377</span> 2999
           </div>
         </div>
       </article>
       <article class="course">
         <div class="heading">
-          <h1>Course 3</h1>
+          <h1>Introduction to Web Development with JavaScript</h1>
         </div>
         <div class="main-cont">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque qui quisquam rem earum incidunt laborum, nobis
-          tempore illum nam neque aliquid doloribus! Nulla fugiat tenetur aut veritatis, cum ducimus repellat?
-          Repellendus voluptatem expedita ipsum nihil cumque, quidem ea consequatur exercitationem tenetur dolorum voluptas
-          sint hic inventore error nemo? Animi vitae quibusdam, nulla voluptatum odit at cum illum. Fugit, ipsum corrupti.
+          Embark on your journey into the world of web development with JavaScript. Learn the fundamentals of front-end
+          and
+          back-end web development, including HTML, CSS, and JavaScript. Gain hands-on experience building interactive
+          web
+          applications and dynamic websites. By the end of this course, you'll have the skills and knowledge to
+          kickstart your
+          career as a web developer and create engaging online experiences.
         </div>
         <div class="footing">
           <div class="addCart">
@@ -156,20 +138,46 @@
             </button>
           </div>
           <div class="price">
-            <span>&#8377</span> 3000
+            <span>&#8377</span> 1999
+          </div>
+        </div>
+      </article>
+      <article class="course">
+        <div class="heading">
+          <h1>Financial Management and Investment Strategies</h1>
+        </div>
+        <div class="main-cont">
+          Gain expertise in financial management and investment strategies with this comprehensive course. Explore key
+          financial
+          concepts, including budgeting, risk management, and portfolio diversification. Learn to analyze financial
+          markets,
+          assess investment opportunities, and develop effective investment strategies tailored to your financial goals.
+          Whether
+          you're a novice investor or seasoned professional, this course will equip you with the knowledge and skills to
+          navigate
+          the complex world of finance with confidence.
+        </div>
+        <div class="footing">
+          <div class="addCart">
+            <button aria-label="cart" title="Cart" class="car">
+              <div class="icnCircle">
+                <ion-icon name="cart-outline" aria-hidden="true"></ion-icon>
+              </div>
+              Add To Cart
+            </button>
+          </div>
+          <div class="price">
+            <span>&#8377</span> 2499
           </div>
         </div>
       </article>
     </section>
 
-    
+
 
 
 
   </main>
-
-
-
 
 
 
@@ -182,6 +190,61 @@
   <a href="#top" class="back-top-btn" aria-label="back top top" data-back-top-btn>
     <ion-icon name="chevron-up" aria-hidden="true"></ion-icon>
   </a>
+
+
+
+  <script>
+    function openCart() {
+      window.location.href = "cart.html";
+    }
+    document.addEventListener("DOMContentLoaded", function () {
+      // Get all the 'Add to Cart' buttons
+      var addToCartBtns = document.querySelectorAll(".car");
+
+      // Add click event listener to each 'Add to Cart' button
+      addToCartBtns.forEach(function (btn) {
+        btn.addEventListener("click", function (event) {
+          event.preventDefault(); // Prevent default form submission behavior
+
+          // Get the course details
+          var courseCard = this.closest(".course");
+          var courseTitle = courseCard.querySelector("h1").innerText;
+          // var courseImageSrc = courseCard
+          //   .querySelector(".img-cover")
+          //   .getAttribute("src");
+          var description = courseCard.querySelector(".main-cont").innerText
+          var priceText = courseCard.querySelector(".price").innerText;
+          var price = parseFloat(priceText.replace("₹", "")); // Extract price from the text
+          // var duration =
+          //   courseCard.querySelector(".abs-badge .span").innerText;
+          // var ratingText = courseCard.querySelector(".rating-text").innerText;
+          // var rating = parseFloat(ratingText.match(/\d+(\.\d+)?/)); // Extract rating from the text
+
+          // Create a new object for the course
+          var course = {
+            title: courseTitle,
+            descr: description,
+            // image: courseImageSrc,
+            price: price,
+            // duration: duration,
+            // rating: rating,
+          };
+
+          // Get the existing cart items from localStorage
+          var cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
+
+          // Add the new course to the cart
+          cartItems.push(course);
+
+          // Store the updated cart items in localStorage
+          localStorage.setItem("cartItems", JSON.stringify(cartItems));
+
+          // Redirect to the cart page
+          window.location.href = "cart.html";
+        });
+      });
+    });
+  </script>
 
   <script src="./assets/js/script.js" defer></script>
 
