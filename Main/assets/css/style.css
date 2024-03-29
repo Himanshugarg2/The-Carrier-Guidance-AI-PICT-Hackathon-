@@ -70,6 +70,13 @@
   #RESET
 \*-----------------------------------*/
 
+input,
+button {
+    background: none;
+    border: none;
+    font: inherit;
+}
+
 *,
 *::before,
 *::after {
@@ -101,27 +108,13 @@ img {
     height: auto;
 }
 
-input,
 button {
-    background: none;
-    border: none;
-    font: inherit;
-}
-
-input {
-    width: 100%;
-}
-
-button {
+    color: inherit;
     cursor: pointer;
 }
 
 ion-icon {
     pointer-events: none;
-}
-
-address {
-    font-style: normal;
 }
 
 html {
@@ -136,8 +129,6 @@ body {
     font-size: 1.6rem;
     line-height: 1.75;
 }
-
-
 
 /*-----------------------------------*\
 #HEADER
@@ -206,6 +197,7 @@ body {
     height: 100%;
     z-index: 2;
     transition: 0.25s var(--cubic-in);
+    /* flex-grow: 5; */
 }
 
 .navbar.active {
@@ -261,6 +253,121 @@ body {
 .overlay.active {
     opacity: 1;
     pointer-events: all;
+}
+
+main {
+    margin-top: 100px;
+}
+
+/*-----------------------------------*\
+#COURSES
+\*-----------------------------------*/
+
+.courses {
+    display: flex;
+    height: fit-content;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    border: 5px solid black;
+    border-radius: 50px;
+    margin: 2vh;
+    color: white;
+}
+
+.course {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 20px;
+    width: 500px;
+    height: 500px;
+    border-radius: 50px;
+    border: 5px solid black;
+}
+
+.heading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60px;
+    width: 100%;
+    text-align: center;
+    border-bottom: 5px solid black;
+    background-color: hsl(145, 75%, 41%);
+    border-radius: 44px 44px 0 0;
+}
+
+.main-cont {
+    padding: 10px;
+    text-align: justify;
+    color: black;
+    flex-grow: 1;
+}
+.footing {
+    border-top: 5px solid black;
+    display: flex;
+    height: 60px;
+    width: 100%;
+    text-align: center;
+    border-radius: 0 0 44px 44px;
+    background-color: hsl(145, 75%, 41%);
+}
+
+.addCart {
+    margin-left: 20px;
+    display: flex;
+
+    width: 40%;
+    height: 80%;
+    margin-top: 6px;
+}
+
+.car {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    background-color: white;
+    border-radius: 100px;
+    padding-right: 20px;
+    /* font-size: 2em; */
+}
+
+.addCart:hover {
+    filter: brightness(80%);
+}
+.car .icnCircle {
+    display: flex;
+    margin-right: 10px;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-left: 6px;
+    height: 2em;
+    width: 2em;
+    border-radius: 50%;
+    color: white;
+    background-color: black;
+}
+
+.price {
+    display: flex;
+    font-size: 1.2em;
+    justify-content: center;
+    align-items: center;
+    width: 180px;
+    height: 80%;
+    margin-top: 5px;
+    margin-left: 10%;
+    color: black;
+    background-color: white;
+    border-radius: 100px;
+}
+
+.price span {
+    display: inline;
+    font-family: sans-serif;
 }
 
 /*-----------------------------------*\
