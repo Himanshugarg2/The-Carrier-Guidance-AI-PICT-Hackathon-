@@ -5,7 +5,7 @@ const chatbox = document.querySelector(".chatbox");
 
 let userMessage;
 
-const API_KEY = "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";
+const API_KEY = "";
 
 const createChatLi = (message, className) => {
     const chatLi = document.createElement("li");
