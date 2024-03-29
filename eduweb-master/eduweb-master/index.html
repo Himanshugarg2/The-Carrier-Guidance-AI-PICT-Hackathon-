@@ -40,6 +40,9 @@
       <a href="index.html" class="logo">
         <img src="./assets/images/LearnXperiencePlain.png" width="50px" alt="LearnXperience" logo" />
       </a>
+      <h1>
+        LearnXperience
+      </h1>
 
       <nav class="navbar" data-navbar>
         <div class="wrapper">
@@ -66,10 +69,10 @@
           </li>
 
           <li class="navbar-item">
-            <a href="#" class="navbar-link" data-nav-link>Recommended Courses(AI)</a>
+            <a href="#" class="navbar-link" data-nav-link>AI</a>
           </li>
           <li class="navbar-item">
-            <a href="#" class="navbar-link" data-nav-link>Log out</a>
+            <a href="" class="navbar-link" id="logout" data-nav-link>Log out</a>
           </li>
         </ul>
       </nav>
@@ -109,7 +112,38 @@
   -->
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-  <script></script>
+  <script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.10.0/firebase-app.js";
+    import { getAuth} from "https://www.gstatic.com/firebasejs/10.10.0/firebase-auth.js";
+
+    const firebaseConfig = {
+      apiKey: "AIzaSyDJ9-6MZ3X_9Hou9axr8Cl5zLLYV4g0sbs",
+      authDomain: "login-page-using-firebas-1a30c.firebaseapp.com",
+      databaseURL: "https://login-page-using-firebas-1a30c-default-rtdb.firebaseio.com",
+      projectId: "login-page-using-firebas-1a30c",
+      storageBucket: "login-page-using-firebas-1a30c.appspot.com",
+      messagingSenderId: "258163682110",
+      appId: "1:258163682110:web:aae4d54db2bc3686005a6f",
+      measurementId: "G-JM07NFC74E"
+    };
+
+    // Initialize Firebase
+
+    const auth = getAuth();
+
+
+    logout.addEventListener('click', (e) => {
+      signOut(auth).then(() => {
+        window.location.href = "home.html";
+      }).catch((error) => {
+        const errorCode = error.code;
+        const errorMessae = error.message;
+        alert(errorMessae)
+      });
+    })
+
+  </script>
 </body>
 
 </html>
