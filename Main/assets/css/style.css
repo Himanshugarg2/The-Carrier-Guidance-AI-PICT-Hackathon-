@@ -489,7 +489,7 @@ main {
 .back-top-btn.active {
     transform: translateY(10px);
     opacity: 1;
-    pointer-events: all;
+    pointer-events: auto;
 }
 
 /*-----------------------------------*\
