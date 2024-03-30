@@ -220,6 +220,12 @@
       padding: 10px 15px;
       border-radius: 5px;
       cursor: pointer;
+      transition: 0.25s;
+    }
+
+    button:hover{
+      filter: brightness(90%);
+      transform: scale(1.01);
     }
 
     #loader {
@@ -263,7 +269,7 @@
       <input type="text" id="user-input" placeholder="Enter your message" />
       <button type="submit" id="send-button" disabled><i class="fas fa-paper-plane"></i></button>
     </form>
-    <button id="download-button">Export to PDF</button>
+    <button id="download-button">Export to .txt file</button>
   </div>
   <div id="loader">
     <img src="loader.gif" width="150px" alt="Loading..." />
