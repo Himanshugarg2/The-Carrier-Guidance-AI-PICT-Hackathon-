@@ -1,4 +1,12 @@
 /* homepage.css */
+body {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-image: url("../images/white-bg.jpeg");
+}
+
 .cart-item {
     display: flex;
     margin-bottom: 20px;
@@ -44,7 +52,6 @@
     margin-top: 20px;
     transition: background-color 0.3s;
 }
-
 
 #clear-cart:hover {
     background-color: #555;

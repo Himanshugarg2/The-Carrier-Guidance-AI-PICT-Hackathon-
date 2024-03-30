@@ -89,8 +89,6 @@ li {
     list-style: none;
 }
 
-
-
 a,
 img,
 span,
@@ -130,7 +128,7 @@ body {
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed;
-    background-image: url(../images/vecteezy_white-gradient-abstract-curve-pattern_22514324.jpeg);
+    background-image: url("../images/white-bg.jpeg");
     color: var(--gray-web);
     font-size: 1.6rem;
     line-height: 1.75;
@@ -230,6 +228,7 @@ body {
 
 .navbar-list {
     padding: 15px 20px;
+    font-size: 1.1em;
 }
 
 .navbar-item:not(:last-child) {
@@ -263,6 +262,39 @@ body {
 
 main {
     margin-top: 100px;
+}
+
+/*-----------------------------------*\
+#QUOTE
+\*-----------------------------------*/
+.cont {
+    /* position: absolute; */
+    height: fit-content;
+    margin-top: 120px;
+    margin-bottom: 20px;
+    margin-left: 40%;
+    width: 50vw;
+    background-color: white;
+    opacity: 0.65;
+    border-radius: 20px;
+}
+
+.cont span {
+    display: inline;
+}
+
+.cont span:nth-of-type(1) {
+    color: red;
+}
+
+.cont span:nth-of-type(2) {
+    color: #00bf63;
+}
+
+.quote {
+    font-size: 5rem;
+    font-weight: 400;
+    padding: 3rem;
 }
 
 /*-----------------------------------*\
