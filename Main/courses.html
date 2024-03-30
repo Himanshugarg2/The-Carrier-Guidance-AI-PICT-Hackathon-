@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Courses</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;600;700;800&family=Poppins:wght@400;500&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="assets/css/courseStyle.css">
+
+</head>
+
+<body>
+    <!-- 
+        - #HEADER
+    -->
+
+    <header class="header" data-header>
+        <div class="container">
+            <a href="index.html" class="logo">
+                <img src="./assets/images/LearnXperiencePlain.png" width="50px" alt="LearnXperience" logo" />
+            </a>
+            <h1>
+                LearnXperience
+            </h1>
+
+            <nav class="navbar" data-navbar>
+                <div class="wrapper">
+                    <a href="#" class="logo">
+                        <img src="./assets/images/LearnXperience.png" width="162" height="50"
+                            alt="LearnXperience logo" />
+                    </a>
+
+                    <button class="nav-close-btn" aria-label="close menu" data-nav-toggler>
+                        <ion-icon name="close-outline" aria-hidden="true"></ion-icon>
+                    </button>
+                </div>
+
+                <ul class="navbar-list">
+                    <li class="navbar-item">
+                        <a href="index.html" class="navbar-link" data-nav-link>Home</a>
+                    </li>
+
+                    <li class="navbar-item">
+                        <a href="courses.html" class="navbar-link" data-nav-link>Courses</a>
+                    </li>
+
+                    <li class="navbar-item">
+                        <a href="#" class="navbar-link" data-nav-link>AI</a>
+                    </li>
+
+                    <li class="navbar-item">
+                        <a href="#" class="navbar-link" data-nav-link>Feedback</a>
+                    </li>
+
+                    <li class="navbar-item">
+                        <button id="logout" class="navbar-link">Log Out</button>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="header-actions">
+                <!-- <button class="header-action-btn" aria-label="toggle search" title="Search">
+            <ion-icon name="search-outline" aria-hidden="true"></ion-icon>
+            </button> -->
+
+                <button class="header-action-btn" aria-label="cart" title="Cart" onclick="openCart()">
+                    <ion-icon name="cart-outline" aria-hidden="true"></ion-icon>
+                </button>
+
+                <button class="header-action-btn" aria-label="open menu" data-nav-toggler>
+                    <ion-icon name="menu-outline" aria-hidden="true"></ion-icon>
+                </button>
+            </div>
+
+            <div class="overlay" data-nav-toggler data-overlay></div>
+        </div>
+    </header>
+
+    <main>
+
+        <section class="coursesBox">
+            <div class="courseTitle">
+                Courses:
+            </div>
+            <div class="courses">
+                <article class="course">
+                    <div class="heading">
+                        <h1>Advanced Data Science and Machine Learning</h1>
+                    </div>
+                    <div class="main-cont">
+                        Dive deep into the world of data science and machine learning with this advanced course. Explore
+                        cutting-edge
+                        algorithms, techniques, and tools used in the industry. Learn to analyze complex datasets, build
+                        predictive
+                        models, and
+                        deploy machine learning solutions. Take your data science skills to the next level and stay
+                        ahead in this
+                        rapidly
+                        evolving field.
+                    </div>
+                    <div class="footing">
+                        <div class="addCart">
+                            <button aria-label="cart" title="Cart" class="car">
+                                <div class="icnCircle">
+                                    <ion-icon name="cart-outline" aria-hidden="true"></ion-icon>
+                                </div>
+                                Add To Cart
+                            </button>
+                        </div>
+                        <div class="price">
+                            <span>&#8377</span> 2999
+                        </div>
+                    </div>
+                </article>
+                <article class="course">
+                    <div class="heading">
+                        <h1>Introduction to Web Development with JavaScript</h1>
+                    </div>
+                    <div class="main-cont">
+                        Embark on your journey into the world of web development with JavaScript. Learn the fundamentals
+                        of
+                        front-end
+                        and
+                        back-end web development, including HTML, CSS, and JavaScript. Gain hands-on experience building
+                        interactive
+                        web
+                        applications and dynamic websites. By the end of this course, you'll have the skills and
+                        knowledge to
+                        kickstart your
+                        career as a web developer and create engaging online experiences.
+                    </div>
+                    <div class="footing">
+                        <div class="addCart">
+                            <button aria-label="cart" title="Cart" class="car">
+                                <div class="icnCircle">
+                                    <ion-icon name="cart-outline" aria-hidden="true"></ion-icon>
+                                </div>
+                                Add To Cart
+                            </button>
+                        </div>
+                        <div class="price">
+                            <span>&#8377</span> 1999
+                        </div>
+                    </div>
+                </article>
+                <article class="course">
+                    <div class="heading">
+                        <h1>Financial Management and Investment Strategies</h1>
+                    </div>
+                    <div class="main-cont">
+                        Gain expertise in financial management and investment strategies with this comprehensive course.
+                        Explore key
+                        financial
+                        concepts, including budgeting, risk management, and portfolio diversification. Learn to analyze
+                        financial
+                        markets,
+                        assess investment opportunities, and develop effective investment strategies tailored to your
+                        financial
+                        goals.
+                        Whether
+                        you're a novice investor or seasoned professional, this course will equip you with the knowledge
+                        and skills
+                        to
+                        navigate
+                        the complex world of finance with confidence.
+                    </div>
+                    <div class="footing">
+                        <div class="addCart">
+                            <button aria-label="cart" title="Cart" class="car">
+                                <div class="icnCircle">
+                                    <ion-icon name="cart-outline" aria-hidden="true"></ion-icon>
+                                </div>
+                                Add To Cart
+                            </button>
+                        </div>
+                        <div class="price">
+                            <span>&#8377</span> 2499
+                        </div>
+                    </div>
+                </article>
+                <article class="course">
+                    <div class="heading">
+                        <h1>Artificial Intelligence and Robotics</h1>
+                    </div>
+                    <div class="main-cont">
+                        Delve into the fascinating world of Artificial Intelligence and Robotics in this comprehensive
+                        course. Explore
+                        the latest advancements in AI and robotics technologies, including neural networks, deep
+                        learning, and
+                        autonomous systems. Learn to design and implement intelligent algorithms for various
+                        applications, from
+                        autonomous vehicles to smart assistants. Gain practical skills through hands-on projects and
+                        real-world
+                        simulations, and be at the forefront of innovation in AI and robotics.
+                    </div>
+                    <div class="footing">
+                        <div class="addCart">
+                            <button aria-label="cart" title="Cart" class="car">
+                                <div class="icnCircle">
+                                    <ion-icon name="cart-outline" aria-hidden="true"></ion-icon>
+                                </div>
+                                Add To Cart
+                            </button>
+                        </div>
+                        <div class="price">
+                            <span>&#8377</span> 3499
+                        </div>
+                    </div>
+                </article>
+
+                <article class="course">
+                    <div class="heading">
+                        <h1>Python Programming for Beginners</h1>
+                    </div>
+                    <div class="main-cont">
+                        Start your journey into the world of programming with Python. This beginner-friendly course
+                        covers the
+                        fundamentals of Python programming language, including syntax, data types, control structures,
+                        and functions.
+                        Gain practical experience by working on hands-on coding exercises and projects. Whether you're
+                        looking to
+                        pursue a career in software development or simply want to learn a valuable skill, this course is
+                        the perfect
+                        starting point.
+                    </div>
+                    <div class="footing">
+                        <div class="addCart">
+                            <button aria-label="cart" title="Cart" class="car">
+                                <div class="icnCircle">
+                                    <ion-icon name="cart-outline" aria-hidden="true"></ion-icon>
+                                </div>
+                                Add To Cart
+                            </button>
+                        </div>
+                        <div class="price">
+                            <span>&#8377</span> 1499
+                        </div>
+                    </div>
+                </article>
+
+                <article class="course">
+                    <div class="heading">
+                        <h1>UX Design Fundamentals</h1>
+                    </div>
+                    <div class="main-cont">
+                        Learn the essentials of User Experience (UX) design in this comprehensive course. Understand the
+                        principles
+                        of user-centered design, information architecture, and usability testing. Gain hands-on
+                        experience with
+                        industry-standard tools and techniques used by UX professionals. By the end of this course,
+                        you'll be equipped
+                        with the skills to create intuitive and user-friendly digital experiences across various
+                        platforms.
+                    </div>
+                    <div class="footing">
+                        <div class="addCart">
+                            <button aria-label="cart" title="Cart" class="car">
+                                <div class="icnCircle">
+                                    <ion-icon name="cart-outline" aria-hidden="true"></ion-icon>
+                                </div>
+                                Add To Cart
+                            </button>
+                        </div>
+                        <div class="price">
+                            <span>&#8377</span> 1999
+                        </div>
+                    </div>
+                </article>
+
+                <article class="course">
+                    <div class="heading">
+                        <h1>Mobile App Development with React Native</h1>
+                    </div>
+                    <div class="main-cont">
+                        Dive into the world of mobile app development with React Native. Learn to build cross-platform
+                        mobile
+                        applications using JavaScript and React framework. Explore the fundamentals of React Native,
+                        including
+                        components, navigation, and state management. Gain practical experience by developing real-world
+                        mobile apps
+                        for iOS and Android devices. Whether you're a beginner or experienced developer, this course
+                        will empower you
+                        to create high-quality mobile apps efficiently.
+                    </div>
+                    <div class="footing">
+                        <div class="addCart">
+                            <button aria-label="cart" title="Cart" class="car">
+                                <div class="icnCircle">
+                                    <ion-icon name="cart-outline" aria-hidden="true"></ion-icon>
+                                </div>
+                                Add To Cart
+                            </button>
+                        </div>
+                        <div class="price">
+                            <span>&#8377</span> 2499
+                        </div>
+                    </div>
+                </article>
+
+                <article class="course">
+                    <div class="heading">
+                        <h1>Data Visualization and Analytics</h1>
+                    </div>
+                    <div class="main-cont">
+                        Master the art of data visualization and analytics in this hands-on course. Learn to effectively
+                        communicate
+                        insights from complex datasets using visualization tools like Tableau and Power BI. Explore
+                        various data
+                        analysis techniques, including statistical analysis and predictive modeling. Develop the skills
+                        to create
+                        compelling data visualizations and dashboards that drive informed decision-making. Whether
+                        you're a data
+                        scientist, analyst, or business professional, this course will enhance your ability to extract
+                        value from data.
+                    </div>
+                    <div class="footing">
+                        <div class="addCart">
+                            <button aria-label="cart" title="Cart" class="car">
+                                <div class="icnCircle">
+                                    <ion-icon name="cart-outline" aria-hidden="true"></ion-icon>
+                                </div>
+                                Add To Cart
+                            </button>
+                        </div>
+                        <div class="price">
+                            <span>&#8377</span> 1999
+                        </div>
+                    </div>
+                </article>
+
+                <article class="course">
+                    <div class="heading">
+                        <h1>Blockchain Fundamentals</h1>
+                    </div>
+                    <div class="main-cont">
+                        Explore the revolutionary technology of blockchain in this comprehensive course. Learn the
+                        fundamentals of
+                        blockchain architecture, consensus mechanisms, and smart contracts. Gain practical experience by
+                        building your
+                        own blockchain applications and decentralized applications (DApps). Understand the potential
+                        applications of
+                        blockchain beyond cryptocurrencies and how it's transforming industries like finance,
+                        healthcare, and supply
+                        chain management. Whether you're a developer, entrepreneur, or business professional, this
+                        course will
+                        provide you with the knowledge and skills to navigate the blockchain landscape.
+                    </div>
+                    <div class="footing">
+                        <div class="addCart">
+                            <button aria-label="cart" title="Cart" class="car">
+                                <div class="icnCircle">
+                                    <ion-icon name="cart-outline" aria-hidden="true"></ion-icon>
+                                </div>
+                                Add To Cart
+                            </button>
+                        </div>
+                        <div class="price">
+                            <span>&#8377</span> 2999
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <a href="#top" class="back-top-btn" aria-label="back top top" data-back-top-btn>
+        <ion-icon name="chevron-up" aria-hidden="true"></ion-icon>
+    </a>
+
+    <script src="./assets/js/script.js" defer></script>
+
+    <!-- 
+        - ionicon link
+    -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+    <script>
+        function openCart() {
+            window.location.href = "cart.html";
+        }
+        document.addEventListener("DOMContentLoaded", function () {
+            // Get all the 'Add to Cart' buttons
+            var addToCartBtns = document.querySelectorAll(".car");
+
+            // Add click event listener to each 'Add to Cart' button
+            addToCartBtns.forEach(function (btn) {
+                btn.addEventListener("click", function (event) {
+                    event.preventDefault(); // Prevent default form submission behavior
+
+                    // Get the course details
+                    var courseCard = this.closest(".course");
+                    var courseTitle = courseCard.querySelector("h1").innerText;
+                    // var courseImageSrc = courseCard
+                    //   .querySelector(".img-cover")
+                    //   .getAttribute("src");
+                    var description = courseCard.querySelector(".main-cont").innerText
+                    var priceText = courseCard.querySelector(".price").innerText;
+                    var price = parseFloat(priceText.replace("₹", "")); // Extract price from the text
+                    // var duration =
+                    //   courseCard.querySelector(".abs-badge .span").innerText;
+                    // var ratingText = courseCard.querySelector(".rating-text").innerText;
+                    // var rating = parseFloat(ratingText.match(/\d+(\.\d+)?/)); // Extract rating from the text
+
+                    // Create a new object for the course
+                    var course = {
+                        title: courseTitle,
+                        descr: description,
+                        // image: courseImageSrc,
+                        price: price,
+                        // duration: duration,
+                        // rating: rating,
+                    };
+
+                    // Get the existing cart items from localStorage
+                    var cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
+
+                    // Add the new course to the cart
+                    cartItems.push(course);
+
+                    // Store the updated cart items in localStorage
+                    localStorage.setItem("cartItems", JSON.stringify(cartItems));
+
+                    // Redirect to the cart page
+                    window.location.href = "cart.html";
+                });
+            });
+        });
+    </script>
+
+</body>
+
+</html>

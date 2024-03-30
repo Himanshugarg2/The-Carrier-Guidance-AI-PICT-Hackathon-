@@ -49,20 +49,21 @@
 
         <ul class="navbar-list">
           <li class="navbar-item">
-            <a href="#home" class="navbar-link" data-nav-link>Home</a>
+            <a href="index.html" class="navbar-link" data-nav-link>Home</a>
           </li>
 
           <li class="navbar-item">
-            <a href="#about" class="navbar-link" data-nav-link>About</a>
-          </li>
-
-          <li class="navbar-item">
-            <a href="index.html#courses" class="navbar-link" data-nav-link>Courses</a>
+            <a href="courses.html" class="navbar-link" data-nav-link>Courses</a>
           </li>
 
           <li class="navbar-item">
             <a href="#" class="navbar-link" data-nav-link>AI</a>
           </li>
+
+          <li class="navbar-item">
+            <a href="feedback.html" class="navbar-link" data-nav-link>Feedback</a>
+          </li>
+
           <li class="navbar-item">
             <button id="logout" class="navbar-link">Log Out</button>
           </li>
@@ -90,7 +91,7 @@
   <main>
     <section class="coursesBox">
       <div class="courseTitle">
-        Popular Courses:
+        Our Courses:
       </div>
       <div class="courses">
         <article class="course">
@@ -180,8 +181,10 @@
           </div>
         </article>
       </div>
+      <div class="view-all" onclick="goCourses()">
+        VIEW ALL COURSES <span>&#8594;</span>
+      </div>
     </section>
-
 
 
 
@@ -206,6 +209,11 @@
     function openCart() {
       window.location.href = "cart.html";
     }
+
+    function goCourses() {
+        window.location.href = "courses.html";
+      }
+
     document.addEventListener("DOMContentLoaded", function () {
       // Get all the 'Add to Cart' buttons
       var addToCartBtns = document.querySelectorAll(".car");

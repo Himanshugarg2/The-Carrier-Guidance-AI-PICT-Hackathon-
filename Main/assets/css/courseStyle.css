@@ -67,7 +67,7 @@
 }
 
 /*-----------------------------------*\
-  #RESET
+#RESET
 \*-----------------------------------*/
 
 input,
@@ -270,7 +270,7 @@ main {
 .courseTitle {
     font-size: 50px;
     margin-left: 1em;
-    /* color: black; */
+    color: rgb(68, 66, 66);
 }
 .courses {
     display: flex;
@@ -397,38 +397,9 @@ main {
     border-radius: 100px;
 }
 
-/* .courses{
-    display: none;
-} */
-
 .price span {
     display: inline;
     font-family: sans-serif;
-}
-
-.view-all{
-    float:right;
-    font-size: 2em;
-    color: black;
-    background-color: var(--white);
-    font-weight: 500;
-    margin-right: 2vw;
-    width: fit-content;
-    padding: 1em;
-
-    border: 2px solid black;
-    border-radius: 100px;
-
-}
-
-.view-all span{
-    display: inline;
-    font-family: sans-serif;
-    transition: 0.25s;
-}
-
-.view-all:hover{
-    filter: brightness(90%);
 }
 
 /*-----------------------------------*\
