@@ -279,9 +279,7 @@ main {
     border-radius: 20px;
 }
 
-.cont span {
-    /* display: inline; */
-}
+
 
 .cont span:nth-of-type(1) {
     color: red;
