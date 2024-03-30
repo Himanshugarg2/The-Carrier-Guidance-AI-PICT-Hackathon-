@@ -10,17 +10,24 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
   <style>
     body{
-        background: hsl(145, 75%, 41%);
+        background: url(vecteezy_white-gradient-abstract-curve-pattern_22514324.jpeg);
         font-size: 1.1rem;
         line-height: 1.75;
+        background-size: cover;
+        background-repeat: cover;
+        background-position: center;
+        background-attachment: fixed;
     }
     .feedback-form{
-        background: #fff;
+        background-color: transparent;
+        backdrop-filter: blur(30px);
         margin-top: 10%;
         margin-bottom: 3%;
+        border: 2px solid black;
     }
     .feedback-form .form-control{
         border-radius: 1rem;
+        border: 1px solid black;
     }
     .feedback-image{
         text-align: center;
@@ -75,6 +82,10 @@
         font-weight: 900;
         display: none;
     }
+    .form-group:hover{
+        transform: scale(1.04);
+        transition: 0.25s;
+    }
     
   </style>
 </head>
@@ -99,14 +110,16 @@
                         <input type="radio" name="1" id="option">No
                         <input type="radio" name="1" id="option">Partially
                     </div>
+                    <div class="form-group">
                     <textarea name="txtMsg" class="form-control" id="msgContent" placeholder="Enter your message here..." required></textarea>
+                    </div>
                     <div class="form-group">
                         <input type="submit" name="btnsubmit" class="btnFeedback" value="Send Feedback" style="outline: none;">
                     </div>
                 </div>
                 <div class="col-md-6">
                     <div class="form-group">
-                        <input type="email" name="TxtEmail" id="emailID" class="form-control" placeholder="Enter your Email here...">
+                        <input type="email" name="TxtEmail" id="emailID" class="form-control" placeholder="Enter your Email here..." required>
                         <p>Are you satisfied with our service?</p>
                         <textarea name="" id="answer" cols="20" rows="2" placeholder="Yes/No"></textarea>
                     </div>
