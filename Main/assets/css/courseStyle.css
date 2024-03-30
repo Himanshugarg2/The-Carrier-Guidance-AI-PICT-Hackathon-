@@ -128,7 +128,7 @@ body {
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed;
-    background-image: url("../images/white-bg.jpeg");
+    background-image: url("../images/white-bg2.jpg");
     color: var(--gray-web);
     font-size: 1.6rem;
     line-height: 1.75;
@@ -295,7 +295,7 @@ main {
     transition: 0.3s;
 }
 
-.course:hover{
+.course:hover {
     transform: scale(1.03);
 }
 

@@ -89,10 +89,7 @@ li {
     list-style: none;
 }
 
-
-
 a,
-
 button,
 ion-icon {
     display: block;
@@ -107,19 +104,16 @@ img {
     height: auto;
 }
 
-
-
 ion-icon {
     pointer-events: none;
 }
-
 
 body {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed;
-    background-image: url("../images/white-bg.jpeg");
+    background-image: url("../images/white-bg2.jpg");
     color: var(--gray-web);
     font-size: 1.6rem;
     line-height: 1.75;
@@ -253,7 +247,6 @@ body {
 main {
     margin-top: 100px;
 }
-
 
 /*-----------------------------------*\
 #MEDIA QUERIES
