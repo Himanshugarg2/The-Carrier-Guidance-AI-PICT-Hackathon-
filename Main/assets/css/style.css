@@ -89,6 +89,8 @@ li {
     list-style: none;
 }
 
+
+
 a,
 img,
 span,
@@ -295,7 +297,7 @@ main {
     transition: 0.3s;
 }
 
-.course:hover{
+.course:hover {
     transform: scale(1.03);
 }
 
@@ -406,29 +408,31 @@ main {
     font-family: sans-serif;
 }
 
-.view-all{
-    float:right;
-    font-size: 2em;
+.view-all {
+    float: right;
+    font-size: 1.5em;
     color: black;
     background-color: var(--white);
     font-weight: 500;
-    margin-right: 2vw;
+    margin-right: 100px;
     width: fit-content;
-    padding: 1em;
+    padding: 0.5em;
+    margin-top: 0.5em;
 
     border: 2px solid black;
     border-radius: 100px;
 
-}
-
-.view-all span{
-    display: inline;
-    font-family: sans-serif;
     transition: 0.25s;
 }
 
-.view-all:hover{
+.view-all span {
+    display: inline;
+    font-family: sans-serif;
+}
+
+.view-all:hover {
     filter: brightness(90%);
+    transform: scale(1.05);
 }
 
 /*-----------------------------------*\
