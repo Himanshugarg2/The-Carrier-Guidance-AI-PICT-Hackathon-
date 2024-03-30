@@ -8,75 +8,6 @@
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
-  <style>
-    body{
-        background: hsl(145, 75%, 41%);
-        font-size: 1.1rem;
-        line-height: 1.75;
-    }
-    .feedback-form{
-        background: #fff;
-        margin-top: 10%;
-        margin-bottom: 3%;
-    }
-    .feedback-form .form-control{
-        border-radius: 1rem;
-    }
-    .feedback-image{
-        text-align: center;
-    }
-    .feedback-image img{ 
-        border-radius: 6rem;
-        width: 10%;
-        margin-top: -3%;
-        transform: rotate(-10deg);
-    }
-    .feedback-form form{
-        padding: 10%;
-    }
-    .feedback-form form .row{
-        margin-bottom: -7%;
-    }
-    .feedback-form h3{
-        margin-bottom: 8%;
-        margin-top: -10%;
-        text-align: center;
-        font-style: italic;
-        font-size: xx-large;
-    }
-    .feedback-form .btnFeedback{
-        width: 50%;
-        border: none;
-        border-radius: 1rem;
-        padding: 1.5%;
-        background: green;
-        font-weight: 600;
-        color: #fff;
-        cursor: pointer;
-    }
-    .feedback-form p{
-        margin-top: 10px;
-        margin-bottom: 3px;
-    }
-    /* Adjusted CSS for the textarea */
-    .feedback-form form textarea[name="txtMsg"] {
-        width: calc(100% - 20px); /* Adjusted width */
-        height: 170px; /* Adjusted height */
-        padding-bottom: 1px;
-        margin-bottom: 10px; /* Added margin */
-    }
-    .alert{
-        width: 100%;
-        background: rgb(0, 255, 106);
-        padding: 10px 20px;
-        border-radius: 5px;
-        text-align: center;
-        font-size: 18px;
-        font-weight: 900;
-        display: none;
-    }
-    
-  </style>
 </head>
 <body>
     <div class="container feedback-form">
@@ -88,10 +19,10 @@
             <div class="row">
                 <div class="col-md-6">
                     <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Enter your name here..." id="name" required>
+                        <input type="text" class="form-control" placeholder="Enter your name here..." id="name">
                     </div>
                     <div class="form-group">
-                        <input type="number" class="form-control" placeholder="Enter phone number here..." maxlength="10" id="phnumber" required>
+                        <input type="number" class="form-control" placeholder="Enter phone number here..." maxlength="10" id="phnumber">
                     </div>
                     <div class="form-group">
                         <p>Were your questions answered properly?..</p>
@@ -99,7 +30,7 @@
                         <input type="radio" name="1" id="option">No
                         <input type="radio" name="1" id="option">Partially
                     </div>
-                    <textarea name="txtMsg" class="form-control" id="msgContent" placeholder="Enter your message here..." required></textarea>
+                    <textarea name="txtMsg" class="form-control" id="msgContent" placeholder="Enter your message here..."></textarea>
                     <div class="form-group">
                         <input type="submit" name="btnsubmit" class="btnFeedback" value="Send Feedback" style="outline: none;">
                     </div>
