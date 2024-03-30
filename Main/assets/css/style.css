@@ -279,8 +279,6 @@ main {
     border-radius: 20px;
 }
 
-
-
 .cont span:nth-of-type(1) {
     color: red;
     display: inline;
@@ -411,15 +409,39 @@ main {
 }
 
 .main-cont {
+    display: flex;
+    align-items: flex-end;
     padding: 10px;
     text-align: justify;
-    color: black;
+    color: white;
     flex-grow: 1;
     background: lightgreen;
-    /* background-size: cover;
+    background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    background-attachment: fixed; */
+    /* background-attachment: fixed; */
+}
+
+#a1 {
+    background: linear-gradient(0deg, #000000BB 30%, #ffffff44 100%),
+        url(../images/dataSci.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+#a2 {
+    background: linear-gradient(0deg, #000000BB 30%, #ffffff44 100%),
+        url(../images/JavaScript-logo.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+#a3 {
+    background: linear-gradient(0deg, #000000BB 30%, #ffffff44 100%),
+        url(../images/money.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 /* 
 .main-cont{

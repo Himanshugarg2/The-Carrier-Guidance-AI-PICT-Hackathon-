@@ -377,15 +377,32 @@
       botIcon.className = 'fas fa-robot bot-icon';
       botMessageElement.appendChild(botIcon);
 
-
+      let formattedMessage = ''; // This will hold the formatted message
 
       for (let i = 0; i < message.length; i++) {
-        botMessageElement.innerHTML += message.charAt(i);
-        await sleep(5);
+        // Handle special characters
+        if (message.charAt(i) === '\n') {
+          // If newline character, add a line break
+          formattedMessage += '<br>';
+        } else if (message.charAt(i) === '*') {
+          // If asterisk, check for bold formatting
+          if (message.charAt(i + 1) === '*') {
+            formattedMessage += '<b>';
+            i++; // Skip the next asterisk
+          } else {
+            formattedMessage += '*'; // Just add the asterisk if not part of formatting
+          }
+        } else {
+          // Just add the character as is
+          formattedMessage += message.charAt(i);
+        }
+        botMessageElement.innerHTML = formattedMessage; // Update the message element
+        await sleep(5); // Wait for a small delay
       }
 
       chatHistory.scrollTop = chatHistory.scrollHeight;
     }
+
 
     function sleep(ms) {
       return new Promise(resolve => setTimeout(resolve, ms));

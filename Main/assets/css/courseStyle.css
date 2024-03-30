@@ -312,28 +312,76 @@ main {
 }
 
 .main-cont {
+    display: flex;
+    align-items: flex-end;
     padding: 10px;
     text-align: justify;
-    color: black;
+    color: white;
     flex-grow: 1;
-    background: lightgreen;
-    /* background-size: cover;
+    /* background: lightgreen; */
+    background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    background-attachment: fixed; */
-}
-/* 
-.main-cont{
-    background: url(../images/dataSci.jpg);
+    /* background-attachment: fixed; */
 }
 
-.main-cont :nth-of-type(2) {
-    background: url(../images/JavaScript-logo.png);
+#a1{
+    background: linear-gradient(0deg,#000000BB 30%, #ffffff44 100%),url(../images/dataSci.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+#a2{
+    background: linear-gradient(0deg,#000000BB 30%, #ffffff44 100%),url(../images/JavaScript-logo.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}   
+#a3{
+    background: linear-gradient(0deg,#000000BB 30%, #ffffff44 100%),url(../images/money.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+#a4{
+    background: linear-gradient(0deg,#000000BB 30%, #ffffff44 100%),url(../images/airbtcs.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+#a5{
+    background: linear-gradient(0deg,#000000BB 30%, #ffffff44 100%),url(../images/python.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+#a6{
+    background: linear-gradient(0deg,#000000BB 30%, #ffffff44 100%),url(../images/uiux.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+#a7{
+    background: linear-gradient(0deg,#000000BB 30%, #ffffff44 100%),url(../images/appdev.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+#a8{
+    background: linear-gradient(0deg,#000000BB 30%, #ffffff44 100%),url(../images/dataViz.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+#a9{
+    background: linear-gradient(0deg,#000000BB 30%, #ffffff44 100%),url(../images/blockchain.jfif);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
-.main-cont:nth-of-type(3) {
-    background: url(../images/stonks.png);
-} */
+
+
 
 .footing {
     border-top: 5px solid black;
