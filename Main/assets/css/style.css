@@ -263,14 +263,18 @@ main {
 #COURSES
 \*-----------------------------------*/
 
+.courseTitle {
+    font-size: 3vw;
+    margin-left: 1em;
+}
 .courses {
     display: flex;
     height: fit-content;
     justify-content: space-evenly;
     flex-wrap: wrap;
-    border: 5px solid black;
+    /* border: 5px solid black; */
     border-radius: 50px;
-    margin: 2vh;
+    margin: 0vh 2vh;
     color: white;
 }
 
@@ -306,12 +310,11 @@ main {
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed;
+}
+
+.main-cont :nth-of-type(1) {
     background-image: url(..assets\images\dataSci.jpg);
 }
-
-.main-cont :nth-of-type(1){
-}
-
 
 .footing {
     border-top: 5px solid black;
