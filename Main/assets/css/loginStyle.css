@@ -60,7 +60,7 @@ body {
     top: 50%;
     transform: translateY(-50%);
     font-size: 20px;
-    color: hsl(145, 75%, 41%); ;
+    color: #00bf63;
 }
 
 .wrapper .remember-forgot {
